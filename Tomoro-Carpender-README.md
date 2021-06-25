@@ -85,7 +85,7 @@ Most Security professionals have many tasks to perform and analysis to completed
 The playbook implements the following tasks:
 - Install Docker.io
 - Install python3-pip
-- installs Docker module
+- Installs Docker module
 - Increases virtual memory to 262144 - this increase in memory is needed to help Elk Docker launch as memory is a common problem which can cause issues with the overall launch of Elk Docker
 - download and launch the docker elk container allowing only traffic the specific ports to limit traffic
 published_ports:
