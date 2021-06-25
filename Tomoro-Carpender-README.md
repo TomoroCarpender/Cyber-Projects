@@ -112,7 +112,7 @@ I have installed the following Beats on these machines:
 - Filebeat
 - Microbeat
 
-The two beat will monitor and collect data such time of activity place activity originated from further I can get the host name and host id.  it will give me process name the PID id. 
+The two beats will monitor and collect data such time of activity, place activity originated, host name, and host id.  It will also give me process name the process id so the viewer can invetigate the traffic and what is being done more fully.  
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
