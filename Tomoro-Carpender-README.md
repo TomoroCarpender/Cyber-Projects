@@ -105,15 +105,15 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
- - Web 1     10.1.0.8
- - Web 2     10.1.0.9 
- - Web 3     10.1.0.11 
+ - Web-1     10.1.0.8
+ - Web-2     10.1.0.9 
+ - Web-3     10.1.0.11 
 
-I have installed the following Beats on these machines:
+I have installed the following beats on these machines:
 - Filebeat
-- Microbeat
+- Metricbeat
 
-The two beats will monitor and collect data such time of activity, place activity originated, host name, and host id.  It will also give me process name the process id so the viewer can invetigate the traffic and what is being done more fully.  
+The two beats will monitor and collect data such as time of activity, place activity originated, host name, and host id.  It will also have the process name and the process id so the viewer can invetigate the traffic and what is being done more fully.  
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -126,12 +126,14 @@ Step 2 Go into and updated the host file to include the attribute [elk] as well 
         [elk]
         10.4.0.4 ansible_python_insterpreter=/usr/bin/python
   
-  - Run Nano Host and add what is show below:
+  - Run Nano host and add what is shown below:
         
 <img width="1148" alt="Host Elk" src="https://user-images.githubusercontent.com/86326713/123365852-5e2daf00-d534-11eb-9a0d-46d8a7bfc632.png">
 
 Step 3: Run the playbook and navigate to the elk container to check that the installation worked as expected.
-               if this worked you should be able to go to  http://[you_elk_server_ip]:5601/app/kibana 
+  - Run  ansible-playbook <playbook-filename.yml>
+
+               if this command is successful you should be able to go to  http://[you_elk_server_ip]:5601/app/kibana 
 
 <img width="1601" alt="Kibana" src="https://user-images.githubusercontent.com/86326713/123365252-270ace00-d533-11eb-8292-c4b88401fe23.png">
 
