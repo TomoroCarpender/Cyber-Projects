@@ -20,9 +20,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
 
 -DVWA
 
--[Filebeat](https://github.com/TomoroCarpender/Cyber-Projects/tree/main/ansible/filebeatl)
+-[Filebeat](https://github.com/TomoroCarpender/Cyber-Projects/blob/main/ansible/filebeat/Filebeat-playbook.rtf)
 
--[Metricbeat](https://github.com/TomoroCarpender/Cyber-Projects/tree/main/ansible/metricbeat)
+-[Metricbeat](https://github.com/TomoroCarpender/Cyber-Projects/blob/main/ansible/metricbeat/metricbeat-playbook.rtf)
 
 This document contains the following details:
 - Description of the Topology
