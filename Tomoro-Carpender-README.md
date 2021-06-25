@@ -134,5 +134,5 @@ Step 3: Run the playbook and navigate to the elk container to check that the ins
 
 <img width="1601" alt="Kibana" src="https://user-images.githubusercontent.com/86326713/123365252-270ace00-d533-11eb-8292-c4b88401fe23.png">
 
-Navigiate to you data by adding a metric - 
+Navigiate to your data by adding a metric - 
 <img width="1748" alt="Kabana Dashboard " src="https://user-images.githubusercontent.com/86326713/123366544-9c779e00-d535-11eb-8863-c81ef4d14803.png">
