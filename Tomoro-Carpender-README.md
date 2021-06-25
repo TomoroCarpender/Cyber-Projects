@@ -8,7 +8,7 @@ For this setup I had 3 servers running vulnerable DVWA containers along with a J
 
 
 
-The files in this repository were used to configure the network depicted below.
+The files in this repository were used to configure the network depicted in the diagram below:
 
 ![Tomoro Carpender (1)](https://user-images.githubusercontent.com/86326713/123363587-14db6080-d530-11eb-853d-c550e60aed3e.png)
 
