@@ -12,14 +12,14 @@ For this setup I had 4 servers running vulnerable DVWA containers along with a J
 
 The files in this repository were used to configure the network depicted below.
 
-[](url)
+![Tomoro Carpender (1)](https://user-images.githubusercontent.com/86326713/123363587-14db6080-d530-11eb-853d-c550e60aed3e.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 
-Elk Install
-DVWA
-FIlebeat
-Metricbeat
+-Elk Install 
+-DVWA
+-[Filebeat](https://github.com/TomoroCarpender/Cyber-Projects/tree/main/ansible/filebeatl)
+-[Metricbeat](https://github.com/TomoroCarpender/Cyber-Projects/tree/main/ansible/metricbeat)
 
 This document contains the following details:
 - Description of the Topology
