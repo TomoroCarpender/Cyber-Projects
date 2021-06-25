@@ -124,6 +124,8 @@ Step 1 Copy the elk_install.yml file to /etc/ansible/roles folder
 Step 2 Go into and updated the host file to include the attribute [elk] as well adding the destination ip of the ELK server. 
         [elk]
         10.4.0.4 ansible_python_insterpreter=/usr/bin/python
+  
+  - Run Nano Host and add what is show below:
         
 <img width="1148" alt="Host Elk" src="https://user-images.githubusercontent.com/86326713/123365852-5e2daf00-d534-11eb-9a0d-46d8a7bfc632.png">
 
