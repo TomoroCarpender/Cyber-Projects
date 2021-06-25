@@ -1,10 +1,10 @@
-Cloud Network with Added Elk Stack
+Cloud Network with Elk Stack
 
 This is a repository of Linux Scripts and Ansible Scripts which I created in my Cybersecurity Class.
 
 The scripts were created for the most part to configure the cloud servers and the docker container which I setup.
 
-For this setup I had 4 servers running vulnerable DVWA containers along with a Jump-Box and a server which was running an ELK Stack container.
+For this setup I had 3 servers running vulnerable DVWA containers along with a Jump-Box and a server which was running an ELK Stack container.
 
 
 
