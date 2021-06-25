@@ -126,12 +126,14 @@ Step 2 Go into and updated the host file to include the attribute [elk] as well 
         [elk]
         10.4.0.4 ansible_python_insterpreter=/usr/bin/python
   
-  - Run Nano host and add what is shown below:
+  - Run 
+      Nano host and make updats as shown below:
         
 <img width="1148" alt="Host Elk" src="https://user-images.githubusercontent.com/86326713/123365852-5e2daf00-d534-11eb-9a0d-46d8a7bfc632.png">
 
 Step 3: Run the playbook and navigate to the elk container to check that the installation worked as expected.
-  - Run  ansible-playbook <playbook-filename.yml>
+  - Run the command: 
+      ansible-playbook <playbook-filename.yml>
 
                if this command is successful you should be able to go to  http://[you_elk_server_ip]:5601/app/kibana 
 
