@@ -128,3 +128,4 @@ Step 2 Go into and updated the host file to include the attribute [elk] as well 
 Step 3: Run the playbook and navigate to the elk container to check that the installation worked as expected.
                if this worked you should be able to go to  http://[you_elk_server_ip]:5601/app/kibana 
 
+<img width="1601" alt="Kibana" src="https://user-images.githubusercontent.com/86326713/123365252-270ace00-d533-11eb-8292-c4b88401fe23.png">
