@@ -100,13 +100,13 @@ published_ports:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-Image/Docker ps - Elk.png
+<img width="1020" alt="Docker ps - ELK" src="https://user-images.githubusercontent.com/86326713/123364740-36d5e280-d532-11eb-9534-c9251ce6a423.png">
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
- -Web 1     10.1.0.8
- -Web 2     10.1.0.9 
- - Web 3    10.1.0.11 
+ - Web 1     10.1.0.8
+ - Web 2     10.1.0.9 
+ - Web 3     10.1.0.11 
 
 I have installed the following Beats on these machines:
 - Filebeat
