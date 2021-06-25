@@ -33,7 +33,8 @@ This document contains the following details:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. One vulnerability we looked at was when you are using the DVWA you can see the hostname of the machine you are working with and see this as the hostname is changed.  Once you can see this you can use DVMA to push Command Injection to a machine and gain access. We ran the following commands together to expose vulnerabilities in the network: 
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. One vulnerability I looked at was when you are using the DVWA use a ping request and a combination of comment to reviel the hostname of a machine. Once you can see this using DVMA you can push Command Injection to a machine and gain root access. To do this you an run combination of command using the the following commands together to expose vulnerabilities in the network: 
+
 -  ; runs a command after the first command, regardless of if the first command is successful.
 -  && runs a command only if the first command is successful.
 -  || runs a command only if the first command fails.
@@ -44,8 +45,8 @@ This tool helps with Availability which is a key aspects of the CIA triad. The l
 The Jump Box can act as an intial stop for all traffic to route through which can limit the number of connection to the underlying network of machines. The Jump-box is a great tool for hardening and monitoring of the devices connected to a network.  
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Jump-box and system network.
--   I added Filebeat to monitor and forward log data this program looks for events in log and forwards them Elasticsearch with the help of Logstach. Filebeat is used to collect data about the file system. 
--  I also added Metricbreat which monitors the system server and sends metrics and statistics to Elasticsearch which again can be accessed using Elasticsearch with the help of Logstash.  Meticbeat is used to collect metrics and of machines.  One example of these metrics is uptime of a machine and times the machines might be being logged into more often. 
+-   I added Filebeat to monitor and forward log data on my network. This tool looks for events in log and forwards them to Elasticsearch with the help of Logstash. Filebeat is used to collect data about the file system. 
+-  I also added Metricbreat which monitors the system server and sends metrics and statistics to Elasticsearch which again can be accessed using Elasticsearch with the help of Logstash.  Metricbeat is used to collect metrics of machines.  One example of these metrics is uptime of a machine and times the machines and where traffic is coming from to the machine. 
 
 The configuration details of each machine may be found below.
 
@@ -61,12 +62,14 @@ Jump Box   | Gateway | 10.1.0.4            | Linux|
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Jump-Box machine can accept connections from the Internet. Access to this machine is only allowed frommy Machines IP address. 
+Only the Jump-Box machine can accept connections from the Internet. Access to this machine is only allowed from my personal machines IP address. 
 
-I have created a rule in the Inbound Security Rules whitelisting my home machines IP only. 
+I have created a rule in the Inbound Security Rules whitelisting my personal machines IP only. 
 Machines within the network can only be accessed by the Jump-box
 
-The ELK server is logging Web 1, Web 2, and Web, 3 the data from the logging programs can only be accessed by using Public IP 13.67.186.145 and Private IP 10.4.0.4
+The ELK server is logging data from Web 1, Web 2, and Web, 3. The data from the logging programs can only be accessed by using:
+  - Public IP 13.67.186.145 
+  - Private IP 10.4.0.4
 
 A summary of the access policies in place can be found in the table below.
 
@@ -79,9 +82,9 @@ A summary of the access policies in place can be found in the table below.
 |  Elk-VM     |  Yes Kibana-5601    |  My public IP          |
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because doing this you can limited the service running, system installation and updated is easier as well as more efficient and can be duplicated more easily. 
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because doing this you can limit the services running, system installation, and updated is easier as well as more efficient and can be duplicated more easily. 
 
-Most Security professionals have many tasks to perform and analysis to completed by automating with Ansible this task can be completed and duplicated more easily and frees up time for performing more urgent tasks for associates. 
+Most Security professionals have many tasks to perform and analysis to completed and so by automating with Ansible this task can be completed and duplicated more easily which frees up time for performing more urgent tasks for associates. 
 
 The playbook implements the following tasks:
 - Install Docker.io
@@ -94,7 +97,7 @@ published_ports:
          -  9200:9200
          -  5044:5044
          
-- Enable to docker to start on boot so that it runs each time the machine is booted and should not need to be started.
+- Enable to docker to start on boot so that it runs each time the machine is booted and the Elk Containg should not need to be started each time.
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
