@@ -1,8 +1,8 @@
 Cloud Network with Elk Stack
 
-This is a repository of Linux Scripts and Ansible Scripts which I created in my Cybersecurity Class.
+This is a repository of Linux Scripts and Ansible Scripts which I created in my Cybersecurity Bootcamp experience.
 
-The scripts were created for the most part to configure the cloud servers and the docker container which I setup.
+The scripts were created for the most part to configure the cloud servers and the docker containers which I established.
 
 For this setup I had 3 servers running vulnerable DVWA containers along with a Jump-Box and a server which was running an ELK Stack container.
 
@@ -12,7 +12,7 @@ The files in this repository were used to configure the network depicted in the 
 
 ![Tomoro Carpender (1)](https://user-images.githubusercontent.com/86326713/123363587-14db6080-d530-11eb-853d-c550e60aed3e.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml files may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above or alternatively, select portions of the .yml files may be used to install only certain pieces like Filebeat.
 
 - [Elk Install](https://github.com/TomoroCarpender/Cyber-Projects/blob/main/ansible/elk-playbook.rtf)
 
@@ -33,19 +33,19 @@ This document contains the following details:
 
 ### Description of the Topology
 
-The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. One vulnerability I looked at was when you are using the DVWA use a ping request and a combination of comment to reviel the hostname of a machine. Once you can see this using DVMA you can push Command Injection to a machine and gain root access. To do this you an run combination of command using the the following commands together to expose vulnerabilities in the network: 
+The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application. One vulnerability I looked at was when you are using the DVWA use a ping request and a combination of comments to reveal the hostname of a machine. Once you can see this using DVMA you can push Command Injection to a machine and gain root access. To do this you an run combination of command using the following commands together to expose vulnerabilities in the network: 
 
 -  ; runs a command after the first command, regardless of if the first command is successful.
 -  && runs a command only if the first command is successful.
 -  || runs a command only if the first command fails.
 
 Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
-This tool helps with Availability which is a key aspects of the CIA triad. The load balancer helps control the follow of traffic it also does diagnostics for the machines it is sending traffic to and if the machine has issues with functionality, it reports this and stops traffic to the machines.  It is affective for controlling DoS Attacks as it doesn't allow for any one server to be overloaded with traffic. 
+This tool helps with availability which is a key aspects of the CIA triad. The load balancer helps control the follow of traffic it also does diagnostics for the machines it is sending traffic to and if the machine has issues with functionality, it reports this and stops traffic to the machines.  It is affective for controlling DoS Attacks as it doesn't allow for any one server to be overloaded with traffic. 
 
-The Jump Box can act as an intial stop for all traffic to route through which can limit the number of connection to the underlying network of machines. The Jump-box is a great tool for hardening and monitoring of the devices connected to a network.  
+The Jump-Box can act as an intial stop for all traffic to route through which can limit the number of connection to the underlying network of machines. The Jump-box is a great tool for hardening and monitoring of the devices connected to a network.  
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Jump-box and system network.
--   I added Filebeat to monitor and forward log data on my network. This tool looks for events in log and forwards them to Elasticsearch with the help of Logstash. Filebeat is used to collect data about the file system. 
+-   I added Filebeat to monitor and forward log data on my network. This tool looks for events in the log and forwards them to Elasticsearch with the help of Logstash. Filebeat is used to collect data about the file system. 
 -  I also added Metricbreat which monitors the system server and sends metrics and statistics to Elasticsearch which again can be accessed using Elasticsearch with the help of Logstash.  Metricbeat is used to collect metrics of machines.  One example of these metrics is uptime of a machine and times the machines and where traffic is coming from to the machine. 
 
 The configuration details of each machine may be found below.
