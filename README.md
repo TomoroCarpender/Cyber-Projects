@@ -1,5 +1,3 @@
-README
-
 Cloud Network with Elk Stack
 
 This is a repository of Linux Scripts and Ansible Scripts which I created in my Cybersecurity Bootcamp experience.
